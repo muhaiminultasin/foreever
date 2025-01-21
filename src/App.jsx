@@ -7,7 +7,7 @@ import Cart from './pages/Cart';
 import PlaceOrder from './pages/PlaceOrder'
 import Product from './pages/Product';
 import Orders from './pages/Orders';
-import Collection from './pages/collection';
+import Collection from './pages/Collection';
 import About from './pages/About';
 import Navbar from './components/Navbar';
 
