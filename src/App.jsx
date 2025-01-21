@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Login from './pages/Login';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
-import PlaceOrder from './pages/placeOrder';
+import PlaceOrder from './pages/PlaceOrder'
 import Product from './pages/Product';
 import Orders from './pages/Orders';
 import Collection from './pages/collection';
