@@ -2,45 +2,45 @@ import React, { useEffect } from "react";
 
 const AdsterraAd = () => {
   useEffect(() => {
-    // Create the first script for `atOptions`
+    // Creating the script to define ad options
     const script1 = document.createElement("script");
     script1.type = "text/javascript";
     script1.innerHTML = `
       atOptions = {
-  'key': '930a3b1c968d41d6495796abfb61d276',
-  'format': 'iframe',
-  'height': 300,
-  'width': 160,
-  'params': {}
-}
+        'key': '930a3b1c968d41d6495796abfb61d276',
+        'format': 'iframe',
+        'height': 300,
+        'width': 160,
+        'params': {}
+      };
     `;
 
-    // Create the second script to load the external script
+    // Creating the second script to load the ad
     const script2 = document.createElement("script");
     script2.type = "text/javascript";
-    script2.src =
-      "//www.highperformanceformat.com/930a3b1c968d41d6495796abfb61d276/invoke.js";
+    script2.src = "https://www.highperformanceformat.com/930a3b1c968d41d6495796abfb61d276/invoke.js";
     script2.async = true;
 
-    // Append both scripts to the ad container
+    // Find the container element to append the scripts to
     const adContainer = document.getElementById("adsterra-banner");
+
+    // Append the scripts once loaded
     if (adContainer) {
       adContainer.appendChild(script1);
       adContainer.appendChild(script2);
     }
 
-    // Cleanup scripts to avoid duplicates
+    // Cleanup function to remove the ad scripts when component unmounts
     return () => {
       if (adContainer) {
         adContainer.innerHTML = "";
       }
     };
-  }, []);
+  }, []); // Empty dependency array ensures this runs once when the component mounts
 
   return (
     <div>
       <h2>Adsterra Banner Ad:</h2>
-      {/* Banner container */}
       <div
         id="adsterra-banner"
         style={{
