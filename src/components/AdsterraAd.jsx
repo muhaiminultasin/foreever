@@ -13,16 +13,18 @@ const AdsterraAd = () => {
 
   useEffect(() => {
     console.log("Ads loading");
-    
+  
     const confScript = document.createElement("script");
     const invokeScript = document.createElement("script");
-    
+  
     confScript.type = "text/javascript";
     confScript.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`;
-    
+  
     invokeScript.type = "text/javascript";
     invokeScript.src = `//www.profitablecreativeformat.com/${atOptions.key}/invoke.js`;
-    
+  
+    console.log(`Script URL: ${invokeScript.src}`); // Debug log
+  
     if (adDiv.current) {
       adDiv.current.appendChild(confScript);
       adDiv.current.appendChild(invokeScript);
