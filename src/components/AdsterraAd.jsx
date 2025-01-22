@@ -5,7 +5,7 @@ const AdsterraAd = () => {
     <div>
       <h2>Adsterra Banner Ad:</h2>
       <a
-        href="https://www.profitablecpmrate.com/yvidtkkm?key=05f1f864f88c4bad622144256627e553"
+        href="https://www.profitablecpmgate.com/yvidtkkm?key=05f1f864f88c4bad622144256627e553"
         target="_blank"
         rel="noopener noreferrer"
         style={{
