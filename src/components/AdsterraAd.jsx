@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const AdsterraAd = () => {
-  return (
-    <div>
-      <h2>Adsterra Banner Ad:</h2>
-      <a
-        href="https://www.profitablecpmgate.com/yvidtkkm?key=05f1f864f88c4bad622144256627e553"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "block",
-          width: "160px",
-          height: "300px",
-          margin: "20px auto",
-          textAlign: "center",
-          backgroundColor: "#f0f0f0", // Optional background color
-        }}
-      >
-        Click here for the ad!
-      </a>
-    </div>
-  );
+  const adDiv = useRef(null);
+
+  const atOptions = {
+    key: "930a3b1c968d41d6495796abfb61d276",
+    format: "iframe",
+    height: 90,
+    width: 728,
+    params: {},
+  };
+
+  useEffect(() => {
+    console.log("Ads loading");
+    
+    const confScript = document.createElement("script");
+    const invokeScript = document.createElement("script");
+    
+    confScript.type = "text/javascript";
+    confScript.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`;
+    
+    invokeScript.type = "text/javascript";
+    invokeScript.src = `//www.profitablecreativeformat.com/${atOptions.key}/invoke.js`;
+    
+    if (adDiv.current) {
+      adDiv.current.appendChild(confScript);
+      adDiv.current.appendChild(invokeScript);
+    }
+  }, []); // Empty dependency array ensures this runs only once after component mounts.
+
+  return <div ref={adDiv}></div>;
 };
 
 export default AdsterraAd;
