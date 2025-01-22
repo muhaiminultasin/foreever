@@ -1,13 +1,13 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import LatestCollection from '../components/LatestCollection';
-import PopunderAd from '../components/PopUnderadd';
+import AdsterraAd from '../components/AdsterraAd'
 
 const Home = () => {
   return (
     <div>
       <Hero/>
-      <PopunderAd/>
+      <AdsterraAd/>
       <LatestCollection/>
     </div>
   )
