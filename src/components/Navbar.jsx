@@ -60,10 +60,10 @@ const Navbar = () => {
                     <img src={assets.dropdown_icon} alt="" className='w-2 rotate-180' />
                     <p>BACK</p>
                 </div>
-                <Link onClick={() => setVisible(false)} to={"/"} className='py-2 pl-6 border '>HOME</Link>
-                <Link onClick={() => setVisible(false)} to={"/collection"} className='py-2 pl-6 border '>COLLECTION</Link>
-                <Link onClick={() => setVisible(false)} to={"/about"} className='py-2 pl-6 border '>ABOUT</Link>
-                <Link onClick={() => setVisible(false)} to={"/contact"} className='py-2 pl-6 border '>CONTACT</Link>
+                <NavLink onClick={() => setVisible(false)} to={"/"} className='py-2 pl-6 border '>HOME</NavLink>
+                <NavLink onClick={() => setVisible(false)} to={"/collection"} className='py-2 pl-6 border '>COLLECTION</NavLink>
+                <NavLink onClick={() => setVisible(false)} to={"/about"} className='py-2 pl-6 border '>ABOUT</NavLink>
+                <NavLink onClick={() => setVisible(false)} to={"/contact"} className='py-2 pl-6 border '>CONTACT</NavLink>
             </div> 
         </div>
 
@@ -72,4 +72,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
