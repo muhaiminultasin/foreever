@@ -142,7 +142,7 @@ export const assets = {
 export const products = [
   {
     id: "a",
-    name: "Man Round Neck T-Shirt",
+    name: "Woman Round Neck T-Shirt",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolore! Vel asperiores ea amet quo!",
     price: "200",
     image: assets.p_img1,
