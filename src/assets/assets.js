@@ -147,7 +147,7 @@ export const products = [
     price: "200",
     image: assets.p_img1,
     category: "Man",
-    subCategory: "Topwear",
+    subCategory: "Winterwear",
     sizes: ["S", "M", "L", "XL"],
     date: "1716621335448",
     bestSeller: true,
