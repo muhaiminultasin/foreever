@@ -14,9 +14,6 @@ const Collection = () => {
 
   const [sortType, setSortType] = useState(['relavent']);
 
-  // useEffect(() => {
-  //   setFilterProducts(products);
-  // });
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -196,11 +193,12 @@ const Collection = () => {
         {/* products mapping */}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
-          {filterProducts.map(({ image, name, price }, index) => {
+          {filterProducts.map(({ images, name, price,id }, index) => {
             return (
               <ProductItem
                 key={index}
-                images={image}
+                id={id}
+                images={images[0]}
                 price={price}
                 name={name}
               />

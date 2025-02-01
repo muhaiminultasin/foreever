@@ -15,7 +15,8 @@ import SearchBar from './components/SearchBar';
 
 const App = () => {
   return (
-    <div className='px-[20px] md:px-[5vw] lg:px-[7vw]'>
+    <>
+      <div className='px-[20px] md:px-[5vw] lg:px-[7vw]'>
       <Navbar/>
       <SearchBar/>
       <Routes>
@@ -24,13 +25,14 @@ const App = () => {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/place-order' element={<PlaceOrder/>}/>
-          <Route path='/product/:productId' element={<Product/>}/>
+          <Route path='/product/:productId' element={<Product />} />
           <Route path='/orders' element={<Orders/>}/>
           <Route path='/collection' element={<Collection/>}/>
           <Route path='/about' element={<About/>}/>
       </Routes>
-      <Footer/>
     </div>
+      <Footer/>
+    </>
   )
 }
 
