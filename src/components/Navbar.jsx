@@ -9,7 +9,7 @@ const Navbar = () => {
     const {setShowSearch} = useContext(ShopContext);
 
   return (
-    <nav className='flex items-center justify-between py-5 font-medium'>
+    <nav className='flex items-center justify-between py-5 font-medium sticky top-0 bg-white z-50 border-b'>
         <img src={assets.logo} alt="" className='w-36'/>
 
         <ul className='hidden sm:flex text-sm gap-5 text-gray-700 '>
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
 
         {/* side bar for small device */}
-        <div className={` absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all  ${visible ? 'w-full' : 'w-0' }`}>
+        <div className={` absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all z-50 ${visible ? 'w-full' : 'w-0' }`}>
             <div className='flex flex-col text-gray-600'>
                 <div onClick={() => setVisible(false)} className='flex items-center gap-3 p-3 cursor-pointer '>
                     <img src={assets.dropdown_icon} alt="" className='w-2 rotate-180' />

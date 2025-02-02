@@ -7,7 +7,7 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const {productId} = useParams();
-  const {products,currency} = useContext(ShopContext);
+  const {products,currency, addToCart} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   // State for showing first image in array when we have nuktiple image to show in the page 
   const [image,setImage] = useState("");
@@ -68,7 +68,7 @@ const Product = () => {
               }
             </div>
           </div>
-          <Button className="rounded-none text-white bg-black mt-8">Add to cart</Button>
+          <Button onPress={() => addToCart(productData.id, size)} className="rounded-none text-white bg-black mt-8">Add to cart</Button>
           <hr className="mt-8 sm:w-4/5"/>
           <div className="text-sm text-gray-500">
             <p>100% original product</p>
